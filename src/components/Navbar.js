@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({setAuthenticate}) => {
+const Navbar = ({authenticate}) => {
   const menuList = [
     "여성",
     "Divided",
@@ -36,13 +36,13 @@ const Navbar = ({setAuthenticate}) => {
     // console.log('key press');
 
   }
-  console.log(setAuthenticate);
+  console.log(authenticate);
   return (
     <div>
       <div>
         <div className="login-button" onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} />
-          <div>{setAuthenticate==true?"로그아웃":"로그인"}</div>
+          <div>{authenticate==true?"로그아웃":"로그인"}</div>
         </div>
       </div>
       <div className="nav-section">
