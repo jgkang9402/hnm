@@ -24,12 +24,20 @@ const ProductDetail = () => {
           <img src={product?.img} />
         </Col>
         <Col>
+        <div>{product?.choice == true?"conscious choice":""}</div>
           <div>{product?.title}</div>
           <div>{product?.price}</div>
+          <div>{product?.new == true?"신제품":""}</div> 
         </Col>
       </Row>
     </Container>
   );
 };
+
+{/* <img src={item?.img} />
+<div>{item?.choice == true?"conscious choice":""}</div>
+<div>{item?.title}</div>
+<div>\{item?.price}</div>
+<div>{item?.new == true?"신제품":""}</div> */}
 
 export default ProductDetail;
