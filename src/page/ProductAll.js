@@ -12,7 +12,7 @@ const ProductAll = () => {
     let url = ` https://my-json-server.typicode.com/jgkang9402/hnm/products?q=${searchQuery}`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     setProductList(data);
     // console.log(productList);
   };
@@ -25,8 +25,8 @@ const ProductAll = () => {
     <div>
       <Container>
         <Row>
-          {productList.map((menu,idx) => (
-            <Col key={idx} lg={3}>
+          {productList.map((menu) => (
+            <Col lg={3}>
               <ProductCard item={menu} />
             </Col>
           ))}

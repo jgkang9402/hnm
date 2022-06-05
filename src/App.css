@@ -22,9 +22,6 @@
   padding: 10px;
   cursor: pointer;
 }
-.menu-list li:hover {
-  color: red;
-}
 .menu-area {
   display: flex;
   justify-content: center;
@@ -45,7 +42,6 @@
 .card {
   border: none !important;
   margin-bottom: 10px;
-  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.1);

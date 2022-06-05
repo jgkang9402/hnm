@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({authenticate,setAuthenticate}) => {
+const Navbar = ({authenticate}) => {
   const menuList = [
     "여성",
     "Divided",
@@ -19,7 +19,6 @@ const Navbar = ({authenticate,setAuthenticate}) => {
   const logonavigate = useNavigate()
   
   const goToLogin =()=>{
-    setAuthenticate(false)
     navigate('/login')
   }
   const goToMain =()=>{
@@ -27,7 +26,7 @@ const Navbar = ({authenticate,setAuthenticate}) => {
   }
   const search = (event)=>{
     if(event.key === 'Enter'){
-      // 엔터입력시 입력한 검색어를 읽어와서 url을 바꿔준다
+      // 엔터입력시 입력한 검색어를 읽어와서 url을 바꿔준다 코드작성
       // console.log('enter key press', event.key); // 엔터키먹는지 확인
       let keyword = event.target.value
       console.log(keyword);
@@ -56,8 +55,8 @@ const Navbar = ({authenticate,setAuthenticate}) => {
       </div>
       <div className="menu-area">
         <ul className="menu-list">
-          {menuList.map((menu,idx) => (
-            <li key={idx}>{menu}</li>
+          {menuList.map((menu) => (
+            <li>{menu}</li>
           ))}
         </ul>
         <div className="search-area">
